@@ -1,8 +1,11 @@
+# James Bankole 1/24/17 Final Project
 import pygame
 
 class Player(pygame.sprite.Sprite):
 
    def __init__(self):
+      """This class creates the player/spaceship. It has the method necessary for the rotation of the spaceship. It also makes the
+      spaceship respond to collisions."""
        super().__init__()
        self.frame = pygame.image.load("spaceship.png")
        self.updated = self.frame
