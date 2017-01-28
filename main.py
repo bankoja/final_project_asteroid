@@ -1,3 +1,4 @@
+# James Bankole 1/24/17 Final Project
 import pygame, sys
 
 from pygame.locals import *
@@ -11,9 +12,10 @@ import asteroid
 import laser
 
 def main():
-
+   # Constants that will be used in the program
    APPLICATION_WIDTH = 670
    APPLICATION_HEIGHT = 670
+   
    mainSurface = pygame.display.set_mode((APPLICATION_HEIGHT, APPLICATION_WIDTH), 0, 32)
    pygame.display.set_caption("ASTEROID ANNIHILATOR")
 
