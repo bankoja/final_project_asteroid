@@ -1,3 +1,4 @@
+# James Bankole 1/24/17 Final Project
 import pygame
 
 class Background:
