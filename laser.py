@@ -1,9 +1,12 @@
+# James Bankole 1/24/17 Final Project
 import pygame
 
 
 class Projectile(pygame.sprite.Sprite):
 
    def __init__(self, angle):
+      """This class creates the projectiles that the spaceship fires. It gives the speed that corresponds with the direction of
+      the spaceship. It also makes the projectile respond to collisions."""
        super().__init__()
 
        self.orb = pygame.Surface((10,10))
