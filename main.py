@@ -12,7 +12,7 @@ import asteroid
 import laser
 
 def main():
-   # Constants that will be used in the program
+   # Constants that will be used in the program.
    APPLICATION_WIDTH = 670
    APPLICATION_HEIGHT = 670
    
@@ -37,6 +37,8 @@ def main():
 
 
    def reblitA():
+      """This function calls the asteroid class to create the asteroid, places it off the screen with the appropriate speed to
+      go towards the player, and then adds the projectile to the corresponding sprite group."""
        projectile = asteroid.Asteroid(mainSurface)
        projectile.rect.x = APPLICATION_WIDTH / 2
        projectile.rect.y = -250
@@ -100,6 +102,7 @@ def main():
        projectileEight.speedx = -1
        projectileGroupEight.add(projectileEight)
 
+   # This allowed the program to continue running without the projectile constantly being fired.   
    hasFired = False
 
 
@@ -119,6 +122,7 @@ def main():
            if event.type == QUIT:
                pygame.quit()
                sys.exit()
+           # This makes the spaceship rotate by calling the rotate method in the player class and assigning it to keys.
            keys = pygame.key.get_pressed()
            if keys[pygame.K_LEFT]:
                mainCharacter.rotate()
@@ -165,7 +169,8 @@ def main():
            aprojectile.move()
            mainSurface.blit(aprojectile.frame, aprojectile.rect)
 
-
+       # This reblits the asteroids after it has been destroyed and ends the game when the asteroid collides with the
+       # spaceship.
        if hasFired:
            beam.move()
            mainSurface.blit(beam.orb, beam.rect)
